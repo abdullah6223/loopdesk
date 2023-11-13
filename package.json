@@ -1,0 +1,46 @@
+{
+  "name": "loopdesk",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "NODE_OPTIONS=\"--max-old-space-size=4096 $NODE_OPTIONS\" nuxt build && mkdir -p .output/server/db && cp -r server/db/migrations .output/server/db/migrations",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2",
+    "vue-tsc": "1.8.22"
+  },
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "current",
+        "linux"
+      ],
+      "cpu": [
+        "current",
+        "x64",
+        "arm64"
+      ],
+      "libc": [
+        "current",
+        "glibc"
+      ]
+    }
+  },
+  "cloudflare": {
+    "bindings": {
+      "POSTGRES": {
+        "description": "Hyperdrive config that accelerates your Postgres connection. Create one or pick an existing config. Needs a Postgres URL with the `vector` extension enabled (Neon and Supabase both support it)."
+      },
+      "BLOB": {
+        "description": "R2 bucket for uploaded files (images on feedback posts). Create a new bucket or pick an existing one. Skipping this disables file uploads but the app still works."
+      }
+    }
+  }
+}
