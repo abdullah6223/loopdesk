@@ -1,0 +1,46 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+.dev.vars
+!.dev.vars.example
+.ali_ram
+
+# Deploy artifacts
+.vercel/
+.wrangler/
+.vercel
+.env*.local
+
+# Scratch space (screenshots, debug dumps, ad-hoc scripts)
+tmp/
+.playwright-mcp/
+
+# Local AI assistant configuration and instruction files
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+
+# Lock file is generated locally by pnpm install
+pnpm-lock.yaml
