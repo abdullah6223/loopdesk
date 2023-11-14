@@ -22,6 +22,7 @@
     "clsx": "^2.0.0",
     "markdown-it": "13.0.2",
     "nuxt": "^3.8.1",
+    "reka-ui": "^2.9.0",
     "shadcn-nuxt": "2.4.3",
     "tailwind-merge": "^2.0.0",
     "vue-sonner": "^1.0.2",
