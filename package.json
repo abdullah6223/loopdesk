@@ -30,6 +30,7 @@
     "markdown-it": "13.0.2",
     "nuxt": "^3.8.1",
     "pg": "8.11.3",
+    "postgres": "^3.4.3",
     "reka-ui": "^2.9.0",
     "shadcn-nuxt": "2.4.3",
     "tailwind-merge": "^2.0.0",
