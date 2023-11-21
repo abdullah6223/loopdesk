@@ -30,6 +30,7 @@
     "clsx": "^2.0.0",
     "drizzle-kit": "^0.20.2",
     "drizzle-orm": "^0.29.0",
+    "image-meta": "0.2.0",
     "lucide-vue-next": "^0.292.0",
     "markdown-it": "13.0.2",
     "nuxt": "^3.8.1",
