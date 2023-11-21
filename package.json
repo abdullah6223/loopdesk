@@ -23,6 +23,7 @@
     "@nuxtjs/seo": "3.4.0",
     "@pinia/nuxt": "0.5.1",
     "@vueuse/core": "^10.6.1",
+    "better-auth": "1.7.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "drizzle-kit": "^0.20.2",
