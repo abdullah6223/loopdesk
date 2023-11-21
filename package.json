@@ -6,6 +6,7 @@
     "build": "NODE_OPTIONS=\"--max-old-space-size=4096 $NODE_OPTIONS\" nuxt build && mkdir -p .output/server/db && cp -r server/db/migrations .output/server/db/migrations",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "generate:auth": "pnpm dlx auth@latest generate",
     "generate:migration": "drizzle-kit generate",
     "migrate": "drizzle-kit migrate",
     "preview": "nuxt preview",
