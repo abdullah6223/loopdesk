@@ -1,0 +1,7 @@
+import { boardOverview } from '../../services/boards'
+import { parseStatusParam } from '#layers/loopdesk/shared/types/post'
+
+export default defineEventHandler(event => boardOverview(
+  { db: useDB(), orgId: event.context.orgId! },
+  parseStatusParam(getQuery(event).status),
+))
