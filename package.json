@@ -36,6 +36,7 @@
     "markdown-it": "13.0.2",
     "nanoid": "^5.0.3",
     "nuxt": "^3.8.1",
+    "openai": "^4.17.4",
     "pg": "8.11.3",
     "pgvector": "^0.1.5",
     "postgres": "^3.4.3",
