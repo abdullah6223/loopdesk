@@ -13,6 +13,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@atlaskit/pragmatic-drag-and-drop": "^0.24.0",
     "@better-auth/core": "1.7.6",
     "@better-auth/oauth-provider": "1.7.6",
     "@better-auth/utils": "0.4.2",
