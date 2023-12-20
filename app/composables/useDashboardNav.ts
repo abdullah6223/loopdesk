@@ -1,0 +1,45 @@
+import type { ComputedRef } from 'vue'
+
+export interface DashboardNavItem {
+  label: string
+  to: string
+  icon: string
+}
+
+export interface DashboardNav {
+  mainNav: ComputedRef<DashboardNavItem[]>
+  settingsNav: ComputedRef<DashboardNavItem[]>
+  // Advanced / integration surfaces. Rendered as a separate, collapsed-by-default
+  // section so it doesn't crowd the everyday Settings items.
+  developerNav: ComputedRef<DashboardNavItem[]>
+}
+
+export function useDashboardNav(): DashboardNav {
+  const { t } = useI18n()
+  const { data: authConfig } = useFetch('/api/auth-config', { key: 'dashboard-auth-config' })
+  const org = useOrgContext()
+  return {
+    mainNav: computed(() => [
+      { label: t('inbox.title'), to: '/dashboard/inbox', icon: 'lucide:inbox' },
+      { label: t('nav.feedback'),  to: '/dashboard/feedback',  icon: 'lucide:message-square' },
+      { label: t('nav.roadmap'),   to: '/dashboard/roadmap',   icon: 'lucide:map' },
+      { label: t('nav.changelog'), to: '/dashboard/changelog', icon: 'lucide:newspaper' },
+      { label: t('nav.helpCenter'), to: '/dashboard/help', icon: 'lucide:book-open' },
+    ]),
+    settingsNav: computed(() => [
+      { label: t('nav.board'),     to: '/dashboard/boards',              icon: 'lucide:settings-2' },
+      // Round chat bubble: matches the launcher visitors actually see, and stays
+      // distinct from Feedback's square one.
+      { label: t('nav.widget'),    to: '/dashboard/settings/widget',     icon: 'lucide:message-circle' },
+      { label: t('nav.members'),   to: '/dashboard/settings/members',    icon: 'lucide:users' },
+      { label: t('nav.portal'),    to: '/dashboard/settings/portal',     icon: 'lucide:layout-template' },
+      { label: t('nav.workspace'), to: '/dashboard/settings/workspace',  icon: 'lucide:building-2' },
+      ...(authConfig.value?.mcp && ['owner', 'manager', 'contributor'].includes(org.value.role ?? '')
+        ? [{ label: 'MCP', to: '/dashboard/mcp', icon: 'lucide:plug' }]
+        : []),
+    ]),
+    developerNav: computed(() => [
+      { label: t('nav.sso'), to: '/dashboard/developer/sso', icon: 'lucide:key-round' },
+    ]),
+  }
+}
