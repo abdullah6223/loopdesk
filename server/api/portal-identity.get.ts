@@ -1,0 +1,40 @@
+import { DEFAULT_ORG_NAME, DEFAULT_ORG_SLUG } from '#layers/loopdesk/shared/constants/default-org'
+import type { ResolvedBranding } from '#layers/loopdesk/shared/utils/branding'
+import { resolveBranding } from '#layers/loopdesk/shared/utils/branding'
+import type { ResolvedGuestAccess } from '#layers/loopdesk/shared/utils/guest'
+import { resolveGuestAccess } from '#layers/loopdesk/shared/utils/guest'
+import type { ResolvedPortalModules } from '#layers/loopdesk/shared/utils/portal-modules'
+import { resolvePortalModules } from '#layers/loopdesk/shared/utils/portal-modules'
+
+function resolveLogoUrl(logo: string | null | undefined): string | null {
+  if (!logo) return null
+  if (logo.startsWith('http') || logo.startsWith('/')) return logo
+  return `/api/files/${logo}`
+}
+
+// Public portal identity for share-card meta and first-paint branding.
+// The unconfigured default org maps to the Loopdesk brand; usePageOg turns the
+// two cases into the personalized vs generic copy variants.
+export default defineEventHandler(async (event): Promise<{
+  name: string
+  logo: string | null
+  isDefault: boolean
+  branding: ResolvedBranding
+  guest: ResolvedGuestAccess
+  modules: ResolvedPortalModules
+}> => {
+  const slug = event.context.orgSlug ?? DEFAULT_ORG_SLUG
+  const info = await getOrgInfo(slug)
+  const rawName = info?.name ?? DEFAULT_ORG_NAME
+  const isDefault = rawName === DEFAULT_ORG_NAME
+  return {
+    name: isDefault ? 'Loopdesk' : rawName,
+    logo: resolveLogoUrl(info?.logo),
+    isDefault,
+    branding: resolveBranding(info?.metadata),
+    // Rides along so the portal knows, on first paint, whether a write should
+    // mint a guest identity or open the sign-in modal.
+    guest: resolveGuestAccess(info?.metadata),
+    modules: resolvePortalModules(info?.metadata),
+  }
+})
