@@ -36,6 +36,13 @@
       "when": 1703071444000,
       "tag": "0004_member_management",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1703234699000,
+      "tag": "0005_silky_silver_fox",
+      "breakpoints": true
     }
   ]
 }
