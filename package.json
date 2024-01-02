@@ -40,6 +40,7 @@
     "better-auth": "1.7.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "cropperjs": "1.6.1",
     "diff": "5.1.0",
     "drizzle-kit": "^0.20.2",
     "drizzle-orm": "^0.29.0",
