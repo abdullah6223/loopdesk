@@ -50,6 +50,13 @@
       "when": 1704441330000,
       "tag": "0006_puzzling_mantis",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1704721853000,
+      "tag": "0007_giant_post",
+      "breakpoints": true
     }
   ]
 }
