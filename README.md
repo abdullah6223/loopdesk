@@ -12,6 +12,8 @@ It is built for startups and product teams who want to self-host their support s
 Main features:
 
 - **Feedback boards.** Users post ideas and bugs, vote and comment; admins set statuses, merge duplicates and link similar posts.
+- **Roadmap and changelog.** A public roadmap built from post statuses and a changelog with AI-assisted drafts.
+- **Dashboard.** Board, inbox, help center, changelog, roadmap, widget, SSO and developer settings for admins.
 - **Flexible sign-in.** Google, GitHub or email and password, with admin roles assigned by email.
 - **English and Chinese UI.**
 
