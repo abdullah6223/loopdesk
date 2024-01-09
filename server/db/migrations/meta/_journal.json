@@ -57,6 +57,13 @@
       "when": 1704721853000,
       "tag": "0007_giant_post",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1704777136000,
+      "tag": "0008_tricky_goblin_queen",
+      "breakpoints": true
     }
   ]
 }
