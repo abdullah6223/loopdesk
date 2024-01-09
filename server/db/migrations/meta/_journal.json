@@ -64,6 +64,13 @@
       "when": 1704777136000,
       "tag": "0008_tricky_goblin_queen",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1704778026000,
+      "tag": "0009_public_ironclad",
+      "breakpoints": true
     }
   ]
 }
