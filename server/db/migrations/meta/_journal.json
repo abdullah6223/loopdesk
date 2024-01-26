@@ -85,6 +85,13 @@
       "when": 1704779727000,
       "tag": "0011_many_the_stranger",
       "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1706255855000,
+      "tag": "0012_strange_mindworm",
+      "breakpoints": true
     }
   ]
 }
