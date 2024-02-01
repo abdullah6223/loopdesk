@@ -15,6 +15,7 @@
     "editor:test:browser": "node scripts/test-markdown-editor-browser.mjs"
   },
   "dependencies": {
+    "@ai-sdk/openai": "4.0.69",
     "@atlaskit/pragmatic-drag-and-drop": "^0.24.0",
     "@better-auth/core": "1.7.6",
     "@better-auth/oauth-provider": "1.7.6",
