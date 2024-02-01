@@ -12,7 +12,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "editor:test": "node --import tsx --test tests/markdown-editor.test.ts",
-    "editor:test:browser": "node scripts/test-markdown-editor-browser.mjs"
+    "editor:test:browser": "node scripts/test-markdown-editor-browser.mjs",
+    "agent:test": "node --env-file=.env --import tsx --test tests/agent-*.test.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "4.0.69",
