@@ -11,6 +11,10 @@ It is built for startups and product teams who want to self-host their support s
 
 Main features:
 
+- **In-product widget.** A chat launcher for any website with an AI assistant, conversation history, feedback submission and help articles, with optional single sign-on so signed-in users are recognised.
+- **AI support agent.** Answers questions from the help center and existing feedback, cites the articles it used, and hands the conversation to a person when it cannot help.
+- **Human inbox.** Conversations handed off by the agent, with take-over, unread tracking, attachments and email notifications to the team.
+- **Help center.** Articles and collections written in a Markdown editor, public help pages, and optional semantic search with pgvector.
 - **Feedback boards.** Users post ideas and bugs, vote and comment; admins set statuses, merge duplicates and link similar posts.
 - **Roadmap and changelog.** A public roadmap built from post statuses and a changelog with AI-assisted drafts.
 - **Dashboard.** Board, inbox, help center, changelog, roadmap, widget, SSO and developer settings for admins.
