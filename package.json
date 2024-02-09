@@ -21,6 +21,7 @@
     "@ai-sdk/openai": "4.0.69",
     "@atlaskit/pragmatic-drag-and-drop": "^0.24.0",
     "@better-auth/core": "1.7.6",
+    "@better-auth/mcp": "1.7.6",
     "@better-auth/oauth-provider": "1.7.6",
     "@better-auth/utils": "0.4.2",
     "@codemirror/commands": "6.3.0",
