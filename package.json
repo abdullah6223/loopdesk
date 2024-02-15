@@ -72,6 +72,7 @@
     "heic-to": "1.6.6",
     "image-meta": "0.2.0",
     "jose": "^5.1.0",
+    "js-tiktoken": "1.0.7",
     "lucide-vue-next": "^0.292.0",
     "markdown-it": "13.0.2",
     "markdown-it-sub": "1.0.0",
