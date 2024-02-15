@@ -99,6 +99,7 @@
     "@iconify-json/logos": "^1.1.37",
     "@iconify-json/lucide": "^1.1.141",
     "@iconify-json/mdi": "^1.1.55",
+    "@modelcontextprotocol/client": "2.2.0",
     "@nuxtjs/tailwindcss": "6.9.4",
     "@types/markdown-it": "13.0.6",
     "@types/node": "^20.9.0",
