@@ -1,0 +1,21 @@
+node_modules
+.nuxt
+.output
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+.ali_ram
+.vercel
+.wrangler
+.data
+*.md
+docs
+
+# Local verification artifacts and credentials
+tmp
+.playwright-mcp
+.dev.vars
+.dev.vars.*
+logs
